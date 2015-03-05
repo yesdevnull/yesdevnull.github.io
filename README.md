@@ -1,3 +1,6 @@
+# Note!
+This GitHub Pages site isn't considered live yet, I'm slowly working on migrating my blog over to GitHub Pages and re-designing the site.  When there's a post saying this site is live and this message is gone, consider it live.
+
 ## Details
 This is the yes > /dev/null blog in Jekyll form.
 
