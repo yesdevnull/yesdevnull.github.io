@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Contempo — A JSON Resume Theme"
+tags:
+- JSON
+- JSON Resume
 github_link: https://github.com/yesdevnull/jsonresume-theme-contempo
 ---
 I recently started using [JSON Resume](https://jsonresume.org/) to make it easier to update my résumé and I found that I didn’t really like any of the themes that were available. So, I did what any person who had a few hours free would do and developed my own… \*drumroll\*
