@@ -14,27 +14,27 @@ The problem was that the PHP binary that is at `/usr/bin/php` via the cli is 5.3
 
 First off, create a bash profile (or edit an existing one) to have an alias to link `php` to `php-latest`. You should SSH into your grid server and enter the following commands:
 
-{% highlight bash %}
+```bash
 nano ~/.bash_profile
-{% endhighlight %}
+```
 
 Now, we’ll add the alias:
 
-{% highlight bash %}
+```bash
 alias php="/usr/bin/php-latest"
-{% endhighlight %}
+```
 
 Exit out of nano by pressing `^X` (or Control+X), then hit `Y` to confirm the changes, then press `Return` to save your changes to the same filename. Finally, type in the command below to make those changes live (otherwise you’d have to log out/in again to see that alias change):
 
-{% highlight bash %}
+```bash
 source ~/.bash_profile
-{% endhighlight %}
+```
 
 You’ll now notice that if you do `php -v` you’ll be using the PHP 5.5.6 cli binary. Hooray! But, don’t celebrate yet. If you try to run a Composer post-*-cmd script that requires PHP 5.4 (or greater), it’ll fail. Unfortunately, the commands through Composer don’t seem to be able to pick up the bash alias so we’ll have to manually edit the composer.json file to update the binary paths. Once again, jump back to your SSH session (or you could edit it in a text editor).
 
 Before I continue, the composer.json file I’m using is the one for `laravel/framework`. So, using `nano` I’m updating each instance of `php` in the scripts section of the composer.json file, and replacing them with `php-latest`.
 
-{% highlight json %}
+```json
 "scripts": {
     "post-install-cmd": [
         "php-latest artisan clear-compiled",
@@ -48,7 +48,7 @@ Before I continue, the composer.json file I’m using is the one for `laravel/fr
         "php-latest artisan key:generate"
     ]
 },
-{% endhighlight %}
+```
 
 Save and edit, then enter `php composer.phar` update and watch as Composer downloads, installs and does its post-install optimisations, all withouts errors!
 

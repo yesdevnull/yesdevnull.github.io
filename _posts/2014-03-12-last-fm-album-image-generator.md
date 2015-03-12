@@ -19,9 +19,9 @@ If you go to [http://lastfmalbumimagegenerator.com](http://lastfmalbumimagegener
 
 Here’s an example of the BBCode you’ll get:
 
-{% highlight bbcode %}
+```bbcode
 [url=http://lastfmalbumimagegenerator.com?user=yesdevnull&num=1&type=link][img]http://lastfmalbumimagegenerator.com?user=yesdevnull&num=1[/img][/url]
-{% endhighlight %}
+```
 
 If you’re a developer, I invite you to [take a look at the code](https://github.com/yesdevnull/Lastfm-Album-Image-Generator) and submit any PRs for fixes, improvements, enhancements etc.
 

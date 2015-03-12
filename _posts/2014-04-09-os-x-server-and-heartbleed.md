@@ -14,7 +14,7 @@ If you keep up with technical news you would've seen an abundance of articles on
 
 Now, when I saw this I got immediately worried about all my clients' (not to mention my own) installation of OS X Server. Thankfully, OS X has an older implementation of OpenSSL (on 10.9.2 it's 0.9.8y – found by doing this command in Terminal: `openssl version`) and according to the Heartbleed website, is not vulnerable. Just to make sure, I ran a Python script found online written by Jared Stafford ([download](http://pastebin.com/WmxzjkXJ)) and when against my server at home, I get the following:
 
-{% highlight bash %}
+```
 Connecting...
 Sending Client Hello...
 Waiting for Server Hello...
@@ -27,7 +27,7 @@ Sending heartbeat request...
 Received alert:
 0000: 02 46                  .F
 Server returned error, likely not vulnerable
-{% endhighlight %}
+```
 
 Further testing on OS X has revealed that Heartbleed won't be exposing anything, which is a huge relief for me. Having said that, as this was undiscovered for 2 years, theoretically there's nothing stopping there being another vulnerability in the wild that could be causing the same (or more or less) damage as Heartbleed.
 

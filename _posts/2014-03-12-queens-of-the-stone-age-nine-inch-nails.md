@@ -13,12 +13,12 @@ I’ve listened to Nine Inch Nails for a few years and never really saw myself a
 
 The warmup act, Brody Dalle, was pretty good. I’ve never heard her stuff before, but I will definitely be checking her out on Spotify.
 
-### Highlights
+# Highlights
 While the concert was excellent and I loved every song that was played, I do have a favourite song for each set, check ‘em out below:
 
 - Queens of the Stone Age: A Song for the Dead &middot; Runner Up: Little Sister
 - Nine Inch Nails: Head Like A Hole &middot; Runner Up: March of the Pigs
 
-### Lowlights
+# Lowlights
 - Typical stupid drunk idiot antics like pushing and fighting
 - So many people smoking weed in the arena, I walked out at the end of the night stinking of smoke and pot
