@@ -1,0 +1,59 @@
+.site-header {
+	.wrapper {
+		@include position(absolute, 20px null null 20px);
+		width: 500px;
+	}
+}
+
+.site-nav {
+	position: relative;
+// 	overflow: hidden;
+	width: 500px;
+	display: block;
+	height: 23px;
+	
+	.site-logo {
+		display: block;
+		@include position(absolute, 0 null null 0);
+		@include size(25px 23px);
+		z-index: 30;
+		background: #fcfcfc url(../resources/images/logo.svg) no-repeat center center;
+		
+		a {
+			display: block;
+			text-indent: -9999px;
+			
+			&:before {
+				display: none;
+			}
+		}
+	}
+	
+	&:hover {
+		ul {
+			top: -10px;
+		}
+	}
+	
+	ul {
+		position: absolute;
+		top: -300%;
+		z-index: 20;
+		margin: 0;
+		left: 30px;
+		padding: 10px 20px 10px 0;
+		@include transition(top .3s linear);
+		
+		li {
+			display: inline-block;
+			@include padding(null 10px);
+		}
+		
+		a {
+			line-height: 23px;
+			text-transform: uppercase;
+			font-size: 15px;
+			font-weight: bold;
+		}
+	}
+}

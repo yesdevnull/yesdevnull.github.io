@@ -1,0 +1,35 @@
+.home {
+	
+	h1 {
+		font-size: 80px;
+		font-weight: 100;
+		font-style: italic;
+		opacity: 0;
+		@include animation(fadeIn 1s ease-in);
+		@include animation-delay(0.5s);
+		@include animation-fill-mode(forwards);
+	}
+	
+	.intro {
+		.first {
+			opacity: 0;
+			@include animation(fadeIn 1s ease-in);
+			@include animation-delay(2s);
+			@include animation-fill-mode(forwards);
+		}
+		
+		.second {
+			opacity: 0;
+			@include animation(fadeIn 1s ease-in);
+			@include animation-delay(3s);
+			@include animation-fill-mode(forwards);
+		}
+		
+		.third {
+			opacity: 0;
+			@include animation(fadeIn 1s ease-in);
+			@include animation-delay(4s);
+			@include animation-fill-mode(forwards);
+		}
+	}
+}

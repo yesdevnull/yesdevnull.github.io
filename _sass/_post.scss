@@ -1,0 +1,14 @@
+.post {
+	.main-title {
+		position: relative;
+		
+		&:before {
+			content: attr(data-title);
+			display: block;
+			@include position(absolute, -2px null null 2px);
+			color: #c9c9c9;
+			z-index: -1;
+			@include transition(top .2s);
+		}
+	}
+}
