@@ -4,8 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name's Dan Barrett, and I live and work in Perth, Western Australia.  I am a Web Developer and Systems Engineer with 10 years experience in the field.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Day-to-day I develop websites and at night I will be either developing more websites or fixing OS X servers.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+### Various ways to find me
+
+- Twitter
+- GitHub
+- LinkedIn
+- Last.fm
+- Foursquare
