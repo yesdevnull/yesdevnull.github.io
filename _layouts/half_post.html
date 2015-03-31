@@ -10,13 +10,33 @@ layout: default
 		{{ content }}
 
 		{% for app in page.apps %}
-			<p>{{ app.name }}</p>
+			{% capture mainDirection %}{% cycle 'push', 'pull' %}{% endcapture %}
+			{% if mainDirection == 'push' %}
+				{% assign secondaryDirection = 'pull' %}
+			{% else %}
+				{% assign secondaryDirection = 'push' %}
+			{% endif %}			
+
+			{% include half.html direction=mainDirection secondaryDirection=secondaryDirection %}
 
 			{% for desc in app.description %}
 				{{ desc | markdownify }}
 			{% endfor %}
 
+			{% include endhalf.html %}
+
+			{% include half.html direction=secondaryDirection secondaryDirection=mainDirection %}
+
+			<p>{{ app.name }}</p>
+
+			{% include endhalf.html %}
+
 			<hr />
 		{% endfor %}
+
+
+		{{ page.footer | markdownify }}
+
+		{{ page.footnote | markdownify }}
 	</article>
 </div>
