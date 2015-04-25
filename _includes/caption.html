@@ -1,4 +1,6 @@
 <figure class="caption">
 	<img src="{{ include.image }}" />
-	<figcaption>{{ include.text }}</figcaption>
+	{% if include.text != '' %}
+		<figcaption>{{ include.text }}</figcaption>
+	{% endif %}
 </figure>
