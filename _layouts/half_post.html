@@ -1,42 +1,57 @@
 ---
 layout: default
 ---
-<div class="half-post post">
-	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
-	</header>
-
-	<article class="post-content">
-		{{ content }}
-
-		{% for app in page.apps %}
+<div class="container half-post post">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="post-title">{{ page.title }}</h1>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12">
+			{{ content }}
+		</div>
+	</div>
+	
+	{% for app in page.apps %}
+		<div class="row">
+			
 			{% capture mainDirection %}{% cycle 'push', 'pull' %}{% endcapture %}
 			{% if mainDirection == 'push' %}
 				{% assign secondaryDirection = 'pull' %}
 			{% else %}
 				{% assign secondaryDirection = 'push' %}
 			{% endif %}			
-
-			{% include half.html direction=mainDirection secondaryDirection=secondaryDirection %}
-
-			{% for desc in app.description %}
-				{{ desc | markdownify }}
-			{% endfor %}
-
+	
+			{% include half.html direction=mainDirection %}
+	
+				{% for desc in app.description %}
+					{{ desc | markdownify }}
+				{% endfor %}
+	
 			{% include endhalf.html %}
-
-			{% include half.html direction=secondaryDirection secondaryDirection=mainDirection %}
-
-			<p>{{ app.name }}</p>
-
+	
+			{% include half.html direction=secondaryDirection %}
+	
+				<p>{{ app.name }}</p>
+	
 			{% include endhalf.html %}
-
-			<hr />
-		{% endfor %}
-
-
-		{{ page.footer | markdownify }}
-
-		{{ page.footnote | markdownify }}
-	</article>
+			
+			<div class="col-xs-12">
+				<hr />
+			</div>
+		
+		</div>
+	{% endfor %}
+		
+	<div class="row">
+		<div class="col-xs-12">
+			{{ page.footer | markdownify }}
+		</div>
+		
+		<div class="col-xs-12">
+			{{ page.footnote | markdownify }}
+		</div>
+	</div>
 </div>
