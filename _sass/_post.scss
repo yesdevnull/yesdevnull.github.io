@@ -1,6 +1,15 @@
 .post {
 	.main-title {
 		position: relative;
+		margin: 0 auto;
+		display: inline-block;
+		
+		&:hover {
+			&:before {
+				@include transform(rotateX(0));
+				opacity: 1;
+			}
+		}
 		
 		&:before {
 			content: attr(data-title);
@@ -8,7 +17,11 @@
 			@include position(absolute, -2px null null 2px);
 			color: #c9c9c9;
 			z-index: -1;
-			@include transition(top .2s);
+			width: 100%;
+			opacity: 0;
+			@include transform(rotateX(-90deg));
+			@include transition(transform .2s, opacity .2s);
+			@include transform-origin(top);
 		}
 	}
 }
