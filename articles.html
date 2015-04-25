@@ -7,11 +7,15 @@ permalink: /articles/
 <div class="post-list">
 	{% for post in site.posts %}
 		<div class="row">
-			<div class="col-xs-12 col-sm-2">
+			<div class="col-xs-6 col-sm-2">
 				{{ post.date | date: "%b %-d, %Y" }}
 			</div>
 			
-			<div class="col-xs-12 col-sm-10">
+			<div class="col-xs-6 col-sm-2">
+				{{ post.content | number_of_words }} Words
+			</div>
+			
+			<div class="col-xs-12 col-sm-8">
 				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 			</div>
 		</div>

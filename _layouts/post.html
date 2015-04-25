@@ -3,19 +3,19 @@ layout: default
 ---
 <div itemscope itemtype="http://schema.org/BlogPosting" class="post container">
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 			<h1 class="main-title" data-title="{{ page.title }}">{{ page.title }}</h1>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-xs-12">
-			<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}{% if page.tags %} &middot; {{ page.tags | post_tags }}{% endif %}{% if page.github_link %} &middot; <a href="{{ page.github_link }}">GitHub</a>{% endif %}</p>
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+			<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %} &middot; {{ page.content | number_of_words }} Words{% if page.github_link %} &middot; <a href="{{ page.github_link }}">GitHub</a>{% endif %}</p>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 			{{ content }}
 		</div>
 	</div>
